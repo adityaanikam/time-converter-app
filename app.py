@@ -63,7 +63,7 @@ if not os.path.exists(CART_FILE):
 
 @app.route('/')
 def serve_index():
-    return send_from_directory('.', 'static/index.html')
+    return send_from_directory('.', 'index.html')
 
 @app.route('/convert_time', methods=['POST'])
 def convert_time():

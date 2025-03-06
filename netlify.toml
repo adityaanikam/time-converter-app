@@ -1,7 +1,7 @@
 [build]
   command = "pip install -r requirements.txt"
-  functions = "functions"
-  publish = "."
+  publish = "."          # Publish from the root directory
+  functions = ".netlify/functions"  # Correct path to Netlify Functions
 
 [[redirects]]
   from = "/.netlify/functions/api/*"
