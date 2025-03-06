@@ -1,0 +1,11 @@
+{
+  "name": "smartcard-ai",
+  "version": "1.0.0",
+  "description": "Time conversion application",
+  "scripts": {
+    "build": "echo 'No build step needed'"
+  },
+  "dependencies": {
+    "luxon": "^3.4.3"
+  }
+}

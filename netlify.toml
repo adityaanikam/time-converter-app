@@ -1,15 +1,23 @@
 [build]
-  command = "pip install -r requirements.txt"
+  command = "npm install && pip install -r requirements.txt"
   publish = "."
   functions = ".netlify/functions"
 
-[functions]
-  directory = ".netlify/functions"
-  node_bundler = "esbuild"
+[[redirects]]
+  from = "/api/convert_time"
+  to = "/.netlify/functions/convert_time"
+  status = 200
+  force = true
 
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/api/:splat"
+  from = "/api/save_cart"
+  to = "/.netlify/functions/save_cart"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/get_cart"
+  to = "/.netlify/functions/get_cart"
   status = 200
   force = true
 
