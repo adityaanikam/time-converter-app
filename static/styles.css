@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #e9ecef;
+}
+.left-panel {
+    float: left;
+    width: 200px;
+}
+.right-panel {
+    margin-left: 220px;
+}
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.green-btn { background-color: #4CAF50; color: white; }
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+#timeFields {
+    width: 100%;
+    border: 2px solid #000;
+    margin: 10px 0;
+    background-color: #fff;
+    padding: 10px;
+}
+#status {
+    margin-top: 10px;
+    color: #333;
+}
+.hidden {
+    display: none;
+}
+.time-input {
+    margin: 10px 0;
+}
+select.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+/* Cart Styles */
+#cart {
+    margin-top: 20px;
+    border: 1px solid #000;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+.cart-item:last-child {
+    border-bottom: none;
+}
+.cart-item span {
+    flex: 1;
+}
+.cart-item button {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

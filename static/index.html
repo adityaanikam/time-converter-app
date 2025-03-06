@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SmartCard AI - Time Converter</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>SmartCard AI</h2>
+        <div class="left-panel">
+            <button class="green-btn">Time</button>
+        </div>
+        <div class="right-panel">
+            <!-- Time Conversion Fields -->
+            <div id="timeFields">
+                <div class="time-input">
+                    <label for="countrySelect">Select Country:</label>
+                    <select id="countrySelect" class="input-field">
+                        <option value="">-- Select Country --</option>
+                        <!-- United States Timezones -->
+                        <option value="US-Eastern">United States - Eastern (ET)</option>
+                        <option value="US-Central">United States - Central (CT)</option>
+                        <option value="US-Mountain">United States - Mountain (MT)</option>
+                        <option value="US-Pacific">United States - Pacific (PT)</option>
+                        <option value="US-Alaska">United States - Alaska (AKT)</option>
+                        <option value="US-Hawaii">United States - Hawaii (HST)</option>
+
+                        <!-- European Countries -->
+                        <option value="UK">United Kingdom (GMT/BST)</option>
+                        <option value="Germany">Germany (CET/CEST)</option>
+                        <option value="France">France (CET/CEST)</option>
+                        <option value="Italy">Italy (CET/CEST)</option>
+                        <option value="Spain">Spain (CET/CEST)</option>
+                        <option value="Netherlands">Netherlands (CET/CEST)</option>
+                        <option value="Switzerland">Switzerland (CET/CEST)</option>
+                        <option value="Sweden">Sweden (CET/CEST)</option>
+                        <option value="Norway">Norway (CET/CEST)</option>
+                        <option value="Finland">Finland (EET/EEST)</option>
+                        <option value="Denmark">Denmark (CET/CEST)</option>
+                        <option value="Poland">Poland (CET/CEST)</option>
+                        <option value="Austria">Austria (CET/CEST)</option>
+                        <option value="Belgium">Belgium (CET/CEST)</option>
+                        <option value="Portugal">Portugal (WET/WEST)</option>
+                        <option value="Ireland">Ireland (GMT/IST)</option>
+                        <option value="Greece">Greece (EET/EEST)</option>
+                        <option value="Czech Republic">Czech Republic (CET/CEST)</option>
+                        <option value="Hungary">Hungary (CET/CEST)</option>
+                        <option value="Romania">Romania (EET/EEST)</option>
+                        <option value="Bulgaria">Bulgaria (EET/EEST)</option>
+                        <option value="Croatia">Croatia (CET/CEST)</option>
+                        <option value="Serbia">Serbia (CET/CEST)</option>
+                        <option value="Slovakia">Slovakia (CET/CEST)</option>
+                        <option value="Slovenia">Slovenia (CET/CEST)</option>
+                        <option value="Estonia">Estonia (EET/EEST)</option>
+                        <option value="Latvia">Latvia (EET/EEST)</option>
+                        <option value="Lithuania">Lithuania (EET/EEST)</option>
+                        <option value="Luxembourg">Luxembourg (CET/CEST)</option>
+                        <option value="Malta">Malta (CET/CEST)</option>
+                        <option value="Cyprus">Cyprus (EET/EEST)</option>
+                    </select>
+                </div>
+                <button onclick="convertToIST()">Convert to IST</button>
+                <button onclick="addToCart()">Add to Cart</button>
+                <div id="localTime" style="margin-top: 10px;">Local Time: Not yet calculated</div>
+                <div id="istTime" style="margin-top: 10px;">Converted IST Time: Not yet calculated</div>
+            </div>
+
+            <!-- Cart Section -->
+            <div id="cart">
+                <h3>Cart</h3>
+                <div id="cartItems"></div>
+            </div>
+
+            <div id="status"></div>
+        </div>
+    </div>
+
+    <script src="/static/main.js"></script>
+</body>
+</html>
