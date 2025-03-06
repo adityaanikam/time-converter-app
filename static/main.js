@@ -12,7 +12,7 @@ window.onload = async function() {
 // Load cart from server
 async function loadCart() {
     try {
-        const response = await fetch('/.netlify/functions/api/get_cart', {
+        const response = await fetch('/api/get_cart', {
             method: 'GET'
         });
         const result = await response.json();
@@ -27,7 +27,7 @@ async function loadCart() {
 // Save cart to server
 async function saveCart() {
     try {
-        const response = await fetch('/.netlify/functions/api/save_cart', {
+        const response = await fetch('/api/save_cart', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ cart })
@@ -56,7 +56,7 @@ async function convertToIST() {
     status.innerHTML = 'Fetching time...';
 
     try {
-        const response = await fetch('/.netlify/functions/api/convert_time', {
+        const response = await fetch('/api/convert_time', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ country })
@@ -131,7 +131,7 @@ async function updateTime() {
     const istTimeDisplay = document.getElementById('istTime');
 
     try {
-        const response = await fetch('/.netlify/functions/api/convert_time', {
+        const response = await fetch('/api/convert_time', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ country })
@@ -153,7 +153,7 @@ async function updateCartTimes() {
     for (let i = 0; i < cart.length; i++) {
         const item = cart[i];
         try {
-            const response = await fetch('/.netlify/functions/api/convert_time', {
+            const response = await fetch('/api/convert_time', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ country: item.country })
